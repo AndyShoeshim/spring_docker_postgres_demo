@@ -1,0 +1,13 @@
+services:
+    postgres:
+      image: postgres
+      ports:
+        - "5342:5342"
+      environment:
+        - POSTGRES_USER=root
+        - POSTGRES_PASSWORD=root
+        - POSTGRES_DB=springdemo
+    springdemo: 
+      build: .
+      ports:
+        - "8080:8080"
